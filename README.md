@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Math Magicians
+# Book Store
 
 The Bookstore is a website that stores list of books for you and allows you to:
 
