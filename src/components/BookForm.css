@@ -1,0 +1,13 @@
+.book-form-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 10%;
+}
+
+.book-form > * {
+  margin-right: 10px;
+}
+
+.book-title {
+  width: 50vw;
+}

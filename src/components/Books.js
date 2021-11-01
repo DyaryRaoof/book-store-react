@@ -1,6 +1,14 @@
+import SingleBook from './SingleBook';
+import BookForm from './BookForm';
+
 function Books() {
   return (
-    <div>Hello world</div>
+    <div>
+      <SingleBook />
+      <SingleBook />
+      <SingleBook />
+      <BookForm />
+    </div>
   );
 }
 
