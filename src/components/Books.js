@@ -4,9 +4,9 @@ import BookForm from './BookForm';
 function Books() {
   return (
     <div>
-      <SingleBook />
-      <SingleBook />
-      <SingleBook />
+      <SingleBook title="BookTitle" author="Book Author" />
+      <SingleBook title="BookTitle" author="Book Author" />
+      <SingleBook title="BookTitle" author="Book Author" />
       <BookForm />
     </div>
   );
