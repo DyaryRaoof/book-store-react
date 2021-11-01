@@ -14,7 +14,6 @@ The Bookstore is a website that stores list of books for you and allows you to:
 - Redux
 ## Getting Started
 
-
 - Clone the repository with git clone https://github.com/DyaryRaoof/book-store-react.git;
 - Open the cloned folder on the IDE of your choice;
 - Install dependencies with npm i;
