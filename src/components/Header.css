@@ -1,0 +1,23 @@
+.header-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-wrapper > * {
+  padding: 2px;
+}
+
+.profile {
+  background-color: blue;
+  min-width: 20px;
+  min-height: 20px;
+  border-radius: 100%;
+  margin-left: auto;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+}

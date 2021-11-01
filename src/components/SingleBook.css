@@ -1,0 +1,24 @@
+.single-book-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2% 10%;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-buttons {
+  display: flex;
+}
+
+.book-chapter-info {
+  display: flex;
+  flex-direction: column;
+}
