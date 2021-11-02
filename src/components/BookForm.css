@@ -11,3 +11,7 @@
 .book-title {
   width: 50vw;
 }
+
+.error-span {
+  color: red;
+}
