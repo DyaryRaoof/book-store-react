@@ -1,19 +1,27 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 import SingleBook from './SingleBook';
 import BookForm from './BookForm';
+import { fetchBooks } from '../api';
 
 function Books() {
-  const books = useSelector((state) => state.bookReducer);
+  const dispatch = useDispatch();
+  const state = useSelector((state) => state.bookReducer);
+  useEffect(() => {
+    if (!state.loading) {
+      fetchBooks(dispatch);
+    }
+  }, []);
 
   return (
     <div>
-      { books
+      { state.books
         .map((book) => (
           <SingleBook
-            key={book.id}
+            key={book.item_id}
             title={book.title}
-            author={book.author}
-            id={book.id}
+            category={book.category}
+            id={book.item_id}
           />
         ))}
       <BookForm />

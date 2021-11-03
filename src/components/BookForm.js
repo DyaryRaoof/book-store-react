@@ -1,27 +1,27 @@
 import './BookForm.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
-import { addBook } from '../redux/books/books';
+import { sendBook } from '../api';
 
 const BookForm = () => {
   const dispatch = useDispatch();
-  const books = useSelector((state) => state.bookReducer);
+  const state = useSelector((state) => state.bookReducer);
   const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
   const [error, setError] = useState('');
 
   const addBookToStore = (e) => {
     e.preventDefault();
     const book = {
-      id: books.length,
+      item_id: state.books.length > 0 ? state.books[state.books.length - 1].item_id + 1 : 0,
       title,
-      author,
+      category,
     };
 
-    if (title && author) {
-      dispatch(addBook(book));
+    if (title && category) {
+      sendBook(dispatch, book);
       setTitle('');
-      setAuthor('');
+      setCategory('');
       setError(null);
     } else {
       setError('Title and author should not be empty !');
@@ -41,14 +41,14 @@ const BookForm = () => {
             minLength="1"
           />
           <input
-            placeholder="Book author"
-            onChange={(e) => { setAuthor(e.target.value); }}
-            value={author}
+            placeholder="Book category"
+            onChange={(e) => { setCategory(e.target.value); }}
+            value={category}
             minLength="1"
           />
           <button type="submit" onClick={(e) => { addBookToStore(e); }}>Add Book</button>
         </form>
-        {error ? <span className="error-span">{error}</span> : null}
+        {error ? <span className="error-span">{state.error ? state.error : error}</span> : null}
 
       </div>
 
