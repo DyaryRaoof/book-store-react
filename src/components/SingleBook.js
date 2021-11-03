@@ -1,9 +1,9 @@
 import './SingleBook.css';
 import { PropTypes } from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/books';
+import { deleteBookOnServer } from '../api';
 
-const SingleBook = ({ title, author, id }) => {
+const SingleBook = ({ title, category, id }) => {
   const dispatch = useDispatch();
 
   return (
@@ -11,13 +11,13 @@ const SingleBook = ({ title, author, id }) => {
     <div className="single-book-wrapper">
       <div>
         <div className="book-info">
-          <span>genere</span>
+          <span>{category}</span>
           <span>{title}</span>
-          <span>{author}</span>
+          <span>{}</span>
         </div>
         <div className="book-buttons">
           <button type="button">Comment</button>
-          <button type="button" onClick={() => { dispatch(removeBook(id)); }}>Remove</button>
+          <button type="button" onClick={() => { deleteBookOnServer(dispatch, id); }}>Remove</button>
           <button type="button">Edit</button>
         </div>
       </div>
@@ -37,7 +37,7 @@ const SingleBook = ({ title, author, id }) => {
 
 SingleBook.propTypes = {
   title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
 };
 
