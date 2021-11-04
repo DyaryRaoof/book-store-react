@@ -9,9 +9,35 @@
 }
 
 .book-title {
-  width: 50vw;
+  width: 40vw;
 }
 
 .error-span {
   color: red;
+}
+
+.add-new-book {
+  color: #888;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.input {
+  height: 30px;
+  margin-right: 10px;
+  padding: 3px;
+  border-radius: 4px;
+  border: solid 1px grey;
+  background-color: #fff;
+}
+
+.submit-button {
+  background-color: #0290ff;
+  border-radius: 3px;
+  color: white;
+  border: none;
+  height: 37px;
+  margin-top: 15px;
+  width: 11.5rem;
 }

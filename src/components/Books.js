@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import SingleBook from './SingleBook';
 import BookForm from './BookForm';
 import { fetchBooks } from '../api';
+import './Books.css';
 
 function Books() {
   const dispatch = useDispatch();
@@ -24,6 +25,7 @@ function Books() {
             id={book.item_id}
           />
         ))}
+      <hr />
       <BookForm />
     </div>
   );
