@@ -31,22 +31,23 @@ const BookForm = () => {
   return (
     <div className="book-form-wrapper">
       <div>
-        <div>Add New Book</div>
+        <div className="add-new-book">ADD NEW BOOK</div>
         <form className="book-form">
           <input
             placeholder="Book title"
-            className="book-title"
+            className="book-title input"
             onChange={(e) => { setTitle(e.target.value); }}
             value={title}
             minLength="1"
           />
           <input
+            className="input"
             placeholder="Book category"
             onChange={(e) => { setCategory(e.target.value); }}
             value={category}
             minLength="1"
           />
-          <button type="submit" onClick={(e) => { addBookToStore(e); }}>Add Book</button>
+          <button className="submit-button" type="submit" onClick={(e) => { addBookToStore(e); }}>ADD BOOK</button>
         </form>
         {error ? <span className="error-span">{state.error ? state.error : error}</span> : null}
 

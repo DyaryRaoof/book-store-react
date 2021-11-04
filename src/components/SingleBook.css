@@ -16,9 +16,69 @@
 
 .book-buttons {
   display: flex;
+  width: 200px;
+  justify-content: space-between;
+}
+
+.book-buttons button {
+  border: none;
+  color: #4386bf;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .book-chapter-info {
   display: flex;
   flex-direction: column;
+}
+
+.book-chapter-info button {
+  background-color: #0290ff;
+  border-radius: 3px;
+  color: white;
+  border: none;
+  height: 2.063rem;
+  margin-top: 15px;
+}
+
+.progress-div {
+  display: flex;
+  align-items: center;
+}
+
+.progress-div img {
+  width: 70px;
+}
+
+.category {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: grey;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.375rem;
+  max-width: 200px;
+}
+
+.author {
+  color: #4386bf;
+  margin-bottom: 10px;
+}
+
+.between-span {
+  color: grey;
+}
+
+.progress-percentage {
+  font-size: 2rem;
+}
+
+.completed {
+  color: grey;
+}
+
+.current-chapter {
+  color: grey;
 }
