@@ -8,6 +8,8 @@ The Bookstore is a website that stores list of books for you and allows you to:
 - Add a book.
 - Remove a selected book.
 
+![screenshot](./app_screenshot.png)
+
 ## Built With
 
 - React js
